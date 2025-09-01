@@ -4,45 +4,65 @@
 
 @layer base {
   :root {
-    /* Themeable Colors - Updated for Light Grey Theme */
-    --background: 0 0% 85%; /* Light grey background */
-    --foreground: 0 0% 15%; /* Dark grey text */
+    /* Updated color scheme to use light grey background and black fonts */
+    --bg-color: hsl(0, 0%, 95%); /* Light grey background */
+    --text-color: hsl(0, 0%, 0%); /* Pure black text */
 
-    /* Updated muted colors for light theme */
-    --muted: 0 0% 90%; /* Light muted background */
-    --muted-foreground: 0 0% 45%; /* Medium grey for muted text */
-    --muted-foreground-light: 0 0% 60%; /* Lighter muted text */
-    --muted-foreground-dark: 0 0% 30%; /* Darker muted text */
+    /* Updated color palette for light grey theme with black text */
+    --background: 0 0% 95%; /* #f2f2f2 - Light grey background */
+    --foreground: 0 0% 0%; /* #000000 - Pure black text */
 
-    --card: 0 0% 100% / 0.8; /* White cards with transparency */
-    --card-foreground: 0 0% 15%; /* Dark text on cards */
+    --card: 0 0% 100%; /* #ffffff - White card background */
+    --card-foreground: 0 0% 0%; /* #000000 - Black text for cards */
 
-    --popover: 0 0% 100%; /* White popover background */
-    --popover-foreground: 0 0% 15%; /* Dark popover text */
+    --popover: 0 0% 100%; /* #ffffff - White for popovers */
+    --popover-foreground: 0 0% 0%; /* #000000 - Black text for popovers */
 
-    /* Primary Accent Colors - Kept for brand consistency */
-    --primary: 165 96% 71%; /* #78fcd6 */
-    --primary-foreground: 160 8% 6%; /* #0d0f0e */
-    --primary-dark: 160 100% 50%; /* #00ffb6 */
-    --primary-light: 160 48% 87%; /* New variable for lighter teal/green shades */
+    /* Coral accent colors */
+    --primary: 0 69% 67%; /* #ff6b6b - Coral for primary actions */
+    --primary-foreground: 0 0% 100%; /* #ffffff - White text on primary actions */
 
-    /* Updated secondary colors for light theme */
-    --secondary: 0 0% 90%; /* Light grey secondary */
-    --secondary-foreground: 0 0% 15%; /* Dark secondary text */
+    --secondary: 0 0% 0%; /* #000000 - Black for secondary elements */
+    --secondary-foreground: 0 0% 100%; /* #ffffff - White text on secondary elements */
 
-    --accent: 0 0% 85%; /* Light accent background */
-    --accent-foreground: 0 0% 15%; /* Dark accent text */
+    --muted: 0 0% 95%; /* #f2f2f2 - Muted background (same as main bg) */
+    --muted-foreground: 0 0% 0%; /* #000000 - Black muted text */
+    --muted-foreground-light: 0 0% 20%; /* Slightly lighter black text */
+    --muted-foreground-dark: 0 0% 0%; /* Pure black text */
 
-    /* Updated border colors for light theme */
-    --border: 0 0% 0% / 0.12; /* Dark borders with low opacity */
-    --border-light: 0 0% 0% / 0.08; /* Lighter borders */
-    --border-dark: 0 0% 0% / 0.15; /* Darker borders */
+    --accent: 0 69% 67%; /* #ff6b6b - Coral for accents */
+    --accent-foreground: 0 0% 100%; /* #ffffff - White text on accents */
 
-    --ring: 165 96% 71%;
+    --destructive: 0 84% 60%; /* #dc2626 - Red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* #ffffff - White text on destructive actions */
+
+    --border: 0 0% 80%; /* #cccccc - Grey for borders */
+    --border-light: 0 0% 85%; /* Lighter borders */
+    --border-dark: 0 0% 70%; /* Darker borders */
+
+    --input: 0 0% 100%; /* #ffffff - White for input fields */
+    --ring: 0 69% 67%; /* #ff6b6b - Coral for focus rings */
+
+    /* Chart colors */
+    --chart-1: 0 69% 67%; /* #ff6b6b - Coral */
+    --chart-2: 0 0% 95%; /* #f2f2f2 - Light grey */
+    --chart-3: 0 0% 0%; /* #000000 - Black */
+    --chart-4: 0 0% 100%; /* #ffffff - White */
+    --chart-5: 0 84% 60%; /* #dc2626 - Red */
 
     --radius: 0.5rem;
 
-    /* Added font family variables for the new typography system */
+    /* Sidebar colors */
+    --sidebar: 0 0% 100%; /* #ffffff - White for sidebar */
+    --sidebar-foreground: 0 0% 0%; /* #000000 - Black text in sidebar */
+    --sidebar-primary: 0 0% 95%; /* #f2f2f2 - Light grey for sidebar primary */
+    --sidebar-primary-foreground: 0 0% 0%; /* #000000 - Black text for sidebar primary */
+    --sidebar-accent: 0 69% 67%; /* #ff6b6b - Coral for sidebar accent */
+    --sidebar-accent-foreground: 0 0% 100%; /* #ffffff - White text for sidebar accent */
+    --sidebar-border: 0 0% 80%; /* #cccccc - Grey for sidebar border */
+    --sidebar-ring: 0 69% 67%; /* #ff6b6b - Coral for sidebar ring */
+
+    /* Font family variables */
     --font-sans: var(--font-inter);
     --font-heading: var(--font-space-grotesk);
     --font-mono: var(--font-mono);
@@ -50,55 +70,55 @@
 }
 
 @layer utilities {
+  /* Updated typography to match Anthropic's clean, sophisticated style */
   .font-heading {
     font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   .font-body {
     font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
   }
 
   .font-accent {
     font-family: var(--font-mono), ui-monospace, monospace;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.05em;
     font-size: 0.875rem;
   }
 
-  /* Added custom animation utilities */
+  /* Updated animations for warmer, more organic feel */
   @keyframes float {
     0%,
     100% {
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
     }
   }
 
   @keyframes glow {
     0%,
     100% {
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 10px rgba(255, 107, 107, 0.1);
     }
     50% {
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 25px rgba(255, 107, 107, 0.2);
     }
   }
 
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
 
   .animate-glow {
-    animation: glow 2s ease-in-out infinite;
+    animation: glow 3s ease-in-out infinite;
   }
 
   /* Smooth scroll behavior */
@@ -106,30 +126,84 @@
     scroll-behavior: smooth;
   }
 
-  /* Custom scrollbar */
+  /* Updated scrollbar to match warm theme */
   ::-webkit-scrollbar {
     width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 107, 107, 0.05);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 107, 107, 0.3);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 107, 107, 0.5);
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
+
   body {
     @apply bg-background text-foreground;
+    /* Updated body styling for light grey background with black text */
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+  }
+
+  /* Updated scroll section styling for Anthropic-style layout */
+  .scroll-section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3rem;
+    padding: 80px 5vw;
+    max-width: 1200px;
+    margin: auto;
+    place-items: center;
+  }
+
+  .scroll-section img {
+    max-height: 70vh;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .scroll-section:first-child img {
+    position: absolute;
+  }
+
+  /* Updated heading styles for black text on light grey background */
+  .scroll-section h1 {
+    display: flex;
+    font-size: 3.5rem;
+    z-index: 2;
+    line-height: 1.1;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
+
+  @media (max-width: 768px) {
+    .scroll-section h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .scroll-section h2 {
+    font-size: 2rem;
+    max-width: 500px;
+    font-weight: 500;
+    color: hsl(var(--foreground));
   }
 }

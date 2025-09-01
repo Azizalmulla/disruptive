@@ -12,7 +12,21 @@ import { AnimatedSection } from "@/components/animated-section"
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gray-300 text-gray-900 relative overflow-hidden pb-0">
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden pb-0">
+      <div className="absolute inset-0 opacity-5">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="organic-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="2" fill="currentColor" opacity="0.3" />
+              <circle cx="80" cy="40" r="1.5" fill="currentColor" opacity="0.2" />
+              <circle cx="50" cy="70" r="1" fill="currentColor" opacity="0.4" />
+              <path d="M10,10 Q30,30 50,10 T90,10" stroke="currentColor" strokeWidth="0.5" fill="none" opacity="0.1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#organic-pattern)" />
+        </svg>
+      </div>
+
       <div className="relative z-10">
         <main className="w-full relative" data-section="hero">
           <HeroSection />

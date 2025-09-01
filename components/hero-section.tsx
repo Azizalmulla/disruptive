@@ -84,7 +84,7 @@ export function HeroSection() {
           className="flex items-center justify-center mb-8"
         >
           <Image
-            src="/images/disruptive-logo.png"
+            src="/images/new-logo-brain-hand.png"
             alt="Disruptive Technologies Logo"
             width={120}
             height={120}

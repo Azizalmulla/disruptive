@@ -65,7 +65,7 @@ export function Header() {
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/disruptive-logo.png"
+              src="/images/new-logo-brain-hand.png"
               alt="Disruptive Technologies"
               width={40}
               height={40}
