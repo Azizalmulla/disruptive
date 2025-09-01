@@ -4,7 +4,6 @@ import { BentoSection } from "@/components/bento-section"
 import { LargeTestimonial } from "@/components/large-testimonial"
 import { SolutionsSection } from "@/components/solutions-section"
 import { IndustriesSection } from "@/components/industries-section"
-import { CaseStudiesSection } from "@/components/case-studies-section"
 import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { FooterSection } from "@/components/footer-section"
@@ -45,9 +44,6 @@ export default function LandingPage() {
         </AnimatedSection>
         <AnimatedSection className="relative z-10 w-full" delay={0.2} data-section="testimonial">
           <LargeTestimonial />
-        </AnimatedSection>
-        <AnimatedSection className="relative z-10 w-full" delay={0.2} data-section="case-studies">
-          <CaseStudiesSection />
         </AnimatedSection>
         <AnimatedSection id="faq-section" className="relative z-10 w-full" delay={0.2} data-section="faq">
           <FAQSection />

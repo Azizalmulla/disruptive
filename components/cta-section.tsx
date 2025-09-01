@@ -22,7 +22,7 @@ export function CTASection() {
 
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/1234567890?text=Hi, I'd like to learn more about Disruptive Technologies AI solutions",
+      "https://wa.me/96566363363?text=Hi, I'd like to learn more about Disruptive Technologies AI solutions",
       "_blank",
     )
   }

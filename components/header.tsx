@@ -69,7 +69,7 @@ export function Header() {
               alt="Disruptive Technologies"
               width={40}
               height={40}
-              className="w-10 h-10"
+              className="w-10 h-auto object-contain max-h-10"
             />
             <span className="font-heading text-foreground text-xl font-bold tracking-tight">
               Disruptive Technologies
