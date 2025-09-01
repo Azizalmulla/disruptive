@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Themeable Colors - Updated for Light Grey Theme */
+    --background: 0 0% 85%; /* Light grey background */
+    --foreground: 0 0% 15%; /* Dark grey text */
+
+    /* Updated muted colors for light theme */
+    --muted: 0 0% 90%; /* Light muted background */
+    --muted-foreground: 0 0% 45%; /* Medium grey for muted text */
+    --muted-foreground-light: 0 0% 60%; /* Lighter muted text */
+    --muted-foreground-dark: 0 0% 30%; /* Darker muted text */
+
+    --card: 0 0% 100% / 0.8; /* White cards with transparency */
+    --card-foreground: 0 0% 15%; /* Dark text on cards */
+
+    --popover: 0 0% 100%; /* White popover background */
+    --popover-foreground: 0 0% 15%; /* Dark popover text */
+
+    /* Primary Accent Colors - Kept for brand consistency */
+    --primary: 165 96% 71%; /* #78fcd6 */
+    --primary-foreground: 160 8% 6%; /* #0d0f0e */
+    --primary-dark: 160 100% 50%; /* #00ffb6 */
+    --primary-light: 160 48% 87%; /* New variable for lighter teal/green shades */
+
+    /* Updated secondary colors for light theme */
+    --secondary: 0 0% 90%; /* Light grey secondary */
+    --secondary-foreground: 0 0% 15%; /* Dark secondary text */
+
+    --accent: 0 0% 85%; /* Light accent background */
+    --accent-foreground: 0 0% 15%; /* Dark accent text */
+
+    /* Updated border colors for light theme */
+    --border: 0 0% 0% / 0.12; /* Dark borders with low opacity */
+    --border-light: 0 0% 0% / 0.08; /* Lighter borders */
+    --border-dark: 0 0% 0% / 0.15; /* Darker borders */
+
+    --ring: 165 96% 71%;
+
+    --radius: 0.5rem;
+
+    /* Added font family variables for the new typography system */
+    --font-sans: var(--font-inter);
+    --font-heading: var(--font-space-grotesk);
+    --font-mono: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+
+  .font-body {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  .font-accent {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+  }
+
+  /* Added custom animation utilities */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
